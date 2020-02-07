@@ -3,10 +3,14 @@ public class SH_Java {
 
 //    You need to write a simple Java program to check if a given String is palindrome or not. A Palindrome is a String which is equal to the reverse of itself, e.g., "Bob" is a palindrome because of the reverse of "Bob" is also "Bob."  Though be prepared with both recursive and iterative solution of this problem. The interviewer may ask you to solve without using any library method, e.g. indexOf() or subString() so be prepared for that.
     public static void main(String args[]) {
-        System.out.println("Is aaa palindrom?: " + isPalindromString("aaa"));
-        System.out.println("Is abc palindrom?: " + isPalindromString("abc"));
-        System.out.println("Is bbbb palindrom?: " + isPalindromString("bbbb"));
-        System.out.println("Is defg palindrom?: " + isPalindromString("defg"));
+        System.out.println(isPalindromString("aaa"));
+        System.out.println(isPalindromString("abc"));
+        System.out.println(isPalindromString("bbbb"));
+        System.out.println(isPalindromString("defg"));
+
+        System.out.println(isPalindrome(1001));
+        System.out.println(isPalindrome(1234));
+        System.out.println(isPalindrome(1221));
     }
 
     public static boolean isPalindromString(String text){
