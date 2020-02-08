@@ -1,5 +1,6 @@
 package pod;
 
+
 import java.util.Scanner;
 
 public class BinaryToInteger{
