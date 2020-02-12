@@ -26,11 +26,10 @@ public class SH_Java2 {
         System.out.println(checkPerfect(12)); // ➞ false
         System.out.println(checkPerfect(97)); // ➞ false
 
-        System.out.println(checkEnding("abc", "bc")); // ➞ true
-        System.out.println(checkEnding("abc", "d")); // ➞ false
-        System.out.println(checkEnding("samurai", "zi")); // ➞ false
-        System.out.println(checkEnding("feminine", "nine")); // ➞ true
-        System.out.println(checkEnding("convention", "tio")); // ➞ false
+        System.out.println(countVowels("apple")); // ➞ 2
+        System.out.println(countVowels("cheesecake")); // ➞ 5
+        System.out.println(countVowels("bbb")); // ➞ 0
+        System.out.println(countVowels("")); // ➞ 0
 
         System.out.println(fib(0)); // ➞ 0
         System.out.println(fib(1)); // ➞ 1
@@ -38,13 +37,20 @@ public class SH_Java2 {
         System.out.println(fib(8)); // ➞ 21
     }
 
-//    Create a function that takes two strings and returns true if the first string ends with the second string; otherwise return false.
+//    Write a function that recursively returns the number of vowels in a string.
 
-    public static boolean checkEnding(String str1, String str2) {
-        return str1.endsWith(str2);
+    static boolean isVowel(char ch) {
+        ch = Character.toUpperCase(ch);
+        return (ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U');
     }
-
-    // https://www.guru99.com/string-endswith-method-java.html
+    public static int countVowels(String str) {
+        int count = 0;
+        for (int i = 0; i < str.length(); i++)
+            if (isVowel(str.charAt(i))){
+                ++count;
+            }
+        return count;
+    }
 
 //    Fibonacci numbers are created in the following way:
 //
