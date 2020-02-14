@@ -1,6 +1,8 @@
 import java.util.Arrays;
 
 public class AB_Java {
+    public static void main(String[] args){
+    }
 
 //    https://edabit.com/challenge/vXYP24qRoQQijc834
 //    Create a function that tests whether or not an integer is a perfect number. A perfect number is a number that can be written as the sum of its factors, excluding the number itself.
@@ -44,11 +46,56 @@ public class AB_Java {
     public static String[] removeDups(String[] str) {
         return Arrays.asList(str).stream().distinct().toArray(String[]::new);
     }
+
+
+//        https://edabit.com/challenge/2Cbbs3pvH2gCMZMsg
+//        Write a function that changes every letter to the next letter:
+//
+//          "a" becomes "b"
+//          "b" becomes "c"
+//          "d" becomes "e"
+//          and so on ...
+
+    public static String move(String word) {
+        String s ="";
+        for(char c : word.toCharArray()){
+            s +=Character.toString((char) (((c - 'a' + 1) % 26) + 'a'));
+        }
+        return s;
+    }
+
 }
 
+//      https://edabit.com/challenge/9Y83kppxQeMbvtDtF
+//      Create a method that alternates the case of the letters in a string.
+
+class Program {
+    public static String alternatingCaps(String s) {
+        boolean upper = true;
+        StringBuilder sb = new StringBuilder();
+        for (char c : s.toCharArray()) {
+            char ch = c;
+            if (ch != ' ') {
+                ch = (upper) ? Character.toUpperCase(c) : Character.toLowerCase(c);
+                upper = !upper;
+            }
+            sb.append(ch);
+        }
+        return sb.toString();
+    }
 
 
+//      https://edabit.com/challenge/GJh9FraKutcnHoruX
+//      Create a method that takes an array of integers between 1 and 10 (excluding one number) and returns the missing number.
 
+
+    public static int missingNum(int[] nums) {
+        int total = 55;
+        for (int i = 0; i < nums.length; i++)
+            total -= nums[i];
+        return total;
+    }
+}
 
 
 
