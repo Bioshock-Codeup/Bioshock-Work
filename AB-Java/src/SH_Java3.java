@@ -7,6 +7,10 @@ public class SH_Java3 {
         System.out.println(nameShuffle("Johnny Depp")); // ➞ "Depp Johnny"
         System.out.println(nameShuffle("Rosie O'Donnell")); // ➞ "O'Donnell Rosie"
         System.out.println(nameShuffle("Seymour Butts")); // ➞ "Butts Seymour"
+
+        System.out.println(reverse("Hello World")); // ➞ "dlroW olleH"
+        System.out.println(reverse("The quick brown fox.")); // ➞ ".xof nworb kciuq ehT"
+        System.out.println(reverse("Edabit is really helpful!")); // ➞ "!lufpleh yllaer si tibadE"
     }
 
 //    Create a function that takes two numbers as arguments (num, length) and returns an array of multiples of num up to length.
@@ -24,5 +28,9 @@ public class SH_Java3 {
         return names[1] + " " + names[0];
     }
 
-
+//    Create a method that takes a string as its argument and returns the string in reversed order.
+    public static String reverse(final String str) {
+        StringBuilder sb = new StringBuilder(str);
+        return sb.reverse().toString();
+    }
 }
