@@ -3,7 +3,7 @@ package pod2;
 //Create a function that takes three integer arguments (a, b, c) and returns the number of equal values.
 
 
-import java.sql.SQLOutput;
+
 
 class Challenge {
     public static int equal(int a, int b, int c) {
